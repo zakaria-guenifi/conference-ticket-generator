@@ -79,11 +79,6 @@
     margin-block-end: 0;
     }
 
-    /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-    ul, ol {
-    list-style: none;
-    }
-
     /* Set core body defaults */
     body {
     min-height: 100dvh;
@@ -110,27 +105,6 @@
     font-size: inherit;
     }
 
-    /* Make sure textareas without a rows attribute are not tiny */
-    textarea:not([rows]) {
-    min-height: 10em;
-    }
-
-    /* Anything that has been anchored to should have extra scroll margin */
-    :target {
-    scroll-margin-block: 5ex;
-    }
-
-    /* remove animations for people who've turned them off */
-    @media (prefers-reduced-motion: reduce) {  
-    *,
-    *::before,
-    *::after {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-        scroll-behavior: auto !important;
-    }
-    }
 }
 
 @layer base {    
@@ -248,6 +222,7 @@
 }
 
 @layer components {
+    /* header */
     header {
         margin-inline: auto;
         margin-block: var(--sp-500);
@@ -258,6 +233,7 @@
         }
     }
     
+    /* Upload section */
     .upload-section  {
         > h1 {
             font-size: clamp( var(--fs-700),1.12rem + 2.8vw, var(--fs-900) );
@@ -343,6 +319,7 @@
         }
     }
 
+    /* Form section */
     .form-section{
         margin-inline: auto;
         max-inline-size: 460px;
@@ -358,33 +335,33 @@
             inline-size: 100%;
             border-radius: 12px;
             caret-color: var(--clr-neutral-100);
-
-            &:not(:last-child) {
-                margin-block: var(--sp-300) var(--sp-450);
-                color: var(--clr-neutral-100);
-                background-color: hsl(from var(--clr-neutral-700) h s l / 0.2);
-                border: 1px solid var(--clr-neutral-500);
-                backdrop-filter: blur(6px);   
-
-                &:hover {
-                    background-color: hsl(from var(--clr-neutral-700) h s l / 0.75);               
-                }
-
-            }
-            &:last-child {
-                letter-spacing: calc( -0.015 * var(--fs-550));
-                border: none;
-
-                &:hover {
-                    background-color: var(--clr-orange-700);
-                    box-shadow: inset 0 -4px 0 var(--clr-orange-500);   
-                    cursor: pointer;          
-                }
+            margin-block: var(--sp-300) var(--sp-450);
+            color: var(--clr-neutral-100);
+            background-color: hsl(from var(--clr-neutral-700) h s l / 0.2);
+            border: 1px solid var(--clr-neutral-500);
+            backdrop-filter: blur(6px);   
+            
+            &:hover {
+                background-color: hsl(from var(--clr-neutral-700) h s l / 0.75);               
+                
             }
             &::placeholder {
                 color: var(--clr-neutral-500);
             }
             
+    }
+    .form-section button {
+        padding: var(--sp-400);
+        inline-size: 100%;
+        border-radius: 12px;
+        letter-spacing: calc( -0.015 * var(--fs-550));
+        border: none;
+
+        &:hover {
+            background-color: var(--clr-orange-700);
+            box-shadow: inset 0 -4px 0 var(--clr-orange-500);   
+            cursor: pointer;          
+        }
     }
 
     .email-info {
@@ -397,6 +374,7 @@
         }
     }
 
+    /* Generated section */
     .ticket-generated {
         display: none;
 

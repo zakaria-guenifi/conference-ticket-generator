@@ -17,14 +17,14 @@
             <p class="text-accent text-center">Secure your spot at next year's biggest coding conference.</p>
             <!-- upload-field -->
             <div class="upload-field | ">
-                <label for="file-input"><span>Upload Avatar</span>
+                <label><span>Upload Avatar</span>
                     <div class="custom-file-input" aria-label="Upload your avatar" tabindex="0">
                         <input type="file" id="file-input" accept="image/jpg, image/jpeg, image/png, image/webp" hidden>
                         <img src="./assets/images/icon-upload.svg" id="upload-img" alt="upload icon">
                         <p class="fw-500 text-accent text-center" id="upload-instruction">Drag and drop or click to upload</p>
                         <div class="img-buttons">
-                            <button class="fs-300" id="remove-img">Remove image</button>
-                            <button class="fs-300" id="change-img">Change image</button>
+                            <button class="fs-300" id="remove-img" type="button">Remove image</button>
+                            <button class="fs-300" id="change-img" type="button">Change image</button>
                         </div>
                     </div>
                 </label> 
@@ -37,6 +37,7 @@
         
         <section class="form-section">
             <form action="#">
+                
                 <label for="full-name">Full Name</label>
                 <br>
                 <input type="text" id="full-name">
@@ -53,7 +54,10 @@
                 <br>
                 <input type="text" id="github-username" placeholder="@yourusername">
                 <br>
-                <input class="fs-550 fw-800 text-dark bg-orange-500" id="submit-button" type="submit" value="Generate My Ticket">
+                <button type="submit" class="fs-550 fw-800 text-dark bg-orange-500" id="submit-button">
+                    Generate My Ticket
+                </button>
+
             </form>
         </section>
 

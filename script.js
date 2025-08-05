@@ -36,6 +36,9 @@ inputFile.addEventListener("change", ()=> {
         
         uploadImg.src = "./assets/images/icon-upload.svg";
         uploadImg.style.padding = "var(--sp-300)";
+        
+        uploadInstruction.style.display = "block";
+        imgBtns.style.display = "none";
         inputFile.value = "";
 
     } else {
