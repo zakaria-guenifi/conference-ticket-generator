@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conference Ticket Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="/assets/images/favicon-32x32.png" type="image/png">
+</head>
+<body>
+    <header>
+        <img src="./assets/images/logo-full.svg" alt="Brand Logo">
+    </header>
+    <main class="wrapper ">
+        <section class="upload-section">
+            <h1 class="text-center">Your Journey to Coding Conf 2025 Starts Here!</h1>
+            <p class="text-accent text-center">Secure your spot at next year's biggest coding conference.</p>
+            <!-- upload-field -->
+            <div class="upload-field | ">
+                <label for="file-input"><span>Upload Avatar</span>
+                    <div class="custom-file-input" aria-label="Upload your avatar" tabindex="0">
+                        <input type="file" id="file-input" accept="image/jpg, image/jpeg, image/png, image/webp" hidden>
+                        <img src="./assets/images/icon-upload.svg" id="upload-img" alt="upload icon">
+                        <p class="fw-500 text-accent text-center" id="upload-instruction">Drag and drop or click to upload</p>
+                        <div class="img-buttons">
+                            <button class="fs-300" id="remove-img">Remove image</button>
+                            <button class="fs-300" id="change-img">Change image</button>
+                        </div>
+                    </div>
+                </label> 
+                <div class="upload-info">
+                    <svg class="text-accent-2" id="info-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M2 8a6 6 0 1 0 12 0A6 6 0 0 0 2 8Z"/><path fill="0" d="M8.004 10.462V7.596ZM8 5.57v-.042Z"/><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M8.004 10.462V7.596M8 5.569v-.042"/></svg>
+                    <p class="fs-200 fw-500 text-accent-2" id="upload-feedback">Upload your photo (JPG or PNG, max size: 500KB).</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="form-section">
+            <form action="#">
+                <label for="full-name">Full Name</label>
+                <br>
+                <input type="text" id="full-name">
+                <br>
+                <label for="email-address">Email Address</label>
+                <br>
+                <input type="email" id="email-address" placeholder="example@email.com">
+                <div class="email-info" id="email-info">
+                    <svg class="text-accent-2 error-message" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M2 8a6 6 0 1 0 12 0A6 6 0 0 0 2 8Z"/><path fill="0" d="M8.004 10.462V7.596ZM8 5.57v-.042Z"/><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M8.004 10.462V7.596M8 5.569v-.042"/></svg>
+                    <p class="fs-200 fw-500 text-accent-2 error-message">Please enter a valid email address.</p>
+                </div>
+                <br>
+                <label for="github-username">GitHub Username</label>
+                <br>
+                <input type="text" id="github-username" placeholder="@yourusername">
+                <br>
+                <input class="fs-550 fw-800 text-dark bg-orange-500" id="submit-button" type="submit" value="Generate My Ticket">
+            </form>
+        </section>
+
+        <!-- Ticket generated section -->
+         <section class="ticket-generated">
+            <h2 class="text-center">Congrats, <span class="name-span" id="name-1-span">Jonatan </span><span class="name-span" id="name-2-span">Kristof</span>! Your ticket is ready.</h2>
+            <p class="fs-550 text-accent text-center">We've emailed your ticket to <span class="email-span | text-orange-500" id="email-span">jonatan@email.com</span> and will send updates in the run up to the event.</p>
+            
+            <article class="ticket">
+
+                <div class="start-col">
+                    <div class="event-info">
+                        <img src="./assets/images/logo-mark.svg" alt="brand logo">
+                        <div class="time-location">
+                            <h3>Coding Conf</h3>
+                            <p class="fs-300 text-accent"><span id="ticket-date">Jan 31, 2026</span> / Austin, TX</p>
+                        </div>
+                    </div>
+                    <div class="user-info">
+                        <img src="./assets/images/image-avatar.jpg" id="ticket-avatar" alt="user avatar">
+                        <div class="user-details">
+                            <h4 class="fs-500 fw-400" id="ticket-name">Jonatan Kristof</h4>
+                            <div class="user-github">
+                                <img src="./assets/images/icon-github.svg" alt="github icon">
+                                <p class="fs-300 text-accent-2" id="ticket-github">@jonatankristof0101</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ticket-number">
+                    <p class="fs-600 fw-500 text-accent-2">#<span id="ticket-code">01609</span></p>
+                </div>
+            </article>
+         </section>
+    </main>
+</body>
+<script src="script.js"></script>
+</html>
